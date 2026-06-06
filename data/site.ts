@@ -184,6 +184,26 @@ export const galleryItems: GalleryItem[] = [
   }
 ];
 
+export const homeShowcaseItems: GalleryItem[] = [
+  {
+    title: "Beard service",
+    category: "Beard",
+    image: "/images/black-barber/home-beard-service.jpg",
+    tall: true
+  },
+  {
+    title: "Gold trimmer finish",
+    category: "Detail",
+    image: "/images/black-barber/home-gold-trimmer.jpg"
+  },
+  {
+    title: "Chair consultation",
+    category: "Studio",
+    image: "/images/black-barber/home-barber-consult.jpg",
+    tall: true
+  }
+];
+
 export const testimonials: Testimonial[] = [
   {
     quote: "Number10 is the kind of barbershop where the haircut is sharp and the service feels personal every time.",

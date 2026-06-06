@@ -7,7 +7,7 @@ import { HeroVideo } from "@/components/hero-video";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceList } from "@/components/service-list";
 import { TestimonialBand } from "@/components/testimonial-band";
-import { contactInfo, galleryItems, products } from "@/data/site";
+import { contactInfo, galleryItems, homeShowcaseItems, products } from "@/data/site";
 import { formatGhs } from "@/lib/utils";
 
 export default function Home() {
@@ -131,7 +131,7 @@ export default function Home() {
           <SectionHeading eyebrow="Be an icon" title="Cuts, details, and atmosphere worth showing.">
             <p>Gallery sections help new customers trust the work before they book.</p>
           </SectionHeading>
-          <GalleryGrid limit={3} />
+          <GalleryGrid items={homeShowcaseItems} />
           <div className="center-cta">
             <CtaButton href="/gallery">View gallery</CtaButton>
           </div>

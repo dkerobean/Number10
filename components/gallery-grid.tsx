@@ -2,9 +2,11 @@ import Image from "next/image";
 import { galleryItems } from "@/data/site";
 import { Reveal } from "@/components/animated";
 import { cn } from "@/lib/utils";
+import type { GalleryItem } from "@/types/site";
 
-export function GalleryGrid({ limit }: { limit?: number }) {
-  const items = typeof limit === "number" ? galleryItems.slice(0, limit) : galleryItems;
+export function GalleryGrid({ limit, items: providedItems }: { limit?: number; items?: GalleryItem[] }) {
+  const sourceItems = providedItems ?? galleryItems;
+  const items = typeof limit === "number" ? sourceItems.slice(0, limit) : sourceItems;
 
   return (
     <div className="gallery-grid">
