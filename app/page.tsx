@@ -3,6 +3,7 @@ import { Clock, MapPin, Phone } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/animated";
 import { CtaButton } from "@/components/cta-button";
 import { GalleryGrid } from "@/components/gallery-grid";
+import { HeroVideo } from "@/components/hero-video";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceList } from "@/components/service-list";
 import { TestimonialBand } from "@/components/testimonial-band";
@@ -13,17 +14,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
-        <video
-          className="hero-video-bg"
-          src="/media/number10-home-reel.mp4"
-          poster="/media/number10-home-reel-poster.webp"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-label="Autoplaying barbershop grooming reel"
-        />
+        <HeroVideo />
         <div className="hero-overlay" />
         <div className="container hero-grid">
           <Stagger className="hero-copy">
