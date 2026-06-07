@@ -25,14 +25,18 @@ export function HeroVideo() {
     <video
       ref={videoRef}
       className="hero-video-bg"
-      src="/media/number10-home-reel.mp4"
       poster="/media/number10-home-reel-poster.webp"
       autoPlay
       muted
       loop
       playsInline
       preload="auto"
+      disableRemotePlayback
       aria-label="Autoplaying barbershop grooming reel"
-    />
+    >
+      <source src="/media/number10-home-reel-mobile.mp4" type="video/mp4" media="(max-width: 640px)" />
+      <source src="/media/number10-home-reel-tablet.mp4" type="video/mp4" media="(max-width: 1024px)" />
+      <source src="/media/number10-home-reel.mp4" type="video/mp4" />
+    </video>
   );
 }
